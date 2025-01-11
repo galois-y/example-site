@@ -1,8 +1,15 @@
-// Select the elements from the HTML
-const helloHeading = document.getElementById('hello');
-const changeTextButton = document.getElementById('changeText');
+// Select the counter and button elements
+const counterElement = document.getElementById('counter');
+const incrementButton = document.getElementById('incrementButton');
 
-// Add an event listener to the button
-changeTextButton.addEventListener('click', () => {
-    helloHeading.textContent = 'You clicked the button!';
+// Initialize the counter value
+let count = 0;
+
+// Add a click event listener to the button
+incrementButton.addEventListener('click', () => {
+    // Increment the count
+    count += 1;
+
+    // Update the counter's text
+    counterElement.textContent = count;
 });
